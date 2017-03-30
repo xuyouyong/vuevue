@@ -1,0 +1,27 @@
+[
+    {
+        "goodsName": "背包一号",
+        "price": "123",
+        "goodsListImg": "https://m.360buyimg.com/mobilecms/s357x357_jfs/t2182/273/2927119709/143428/48e586c2/56fe4d97N205e5abc.jpg!q50.jpg"
+    },
+    {
+        "goodsName": "背包2号",
+        "price": "111",
+        "goodsListImg": "https://m.360buyimg.com/mobilecms/s357x357_jfs/t2863/144/4104028512/281138/c53b2d31/57a98459N63d2045f.jpg!q50.jpg"
+    },
+    {
+        "goodsName": "背包3号",
+        "price": "142",
+        "goodsListImg": "https://m.360buyimg.com/mobilecms/s357x357_jfs/t4003/10/1728479432/130726/2e889d09/5892f9e1N403e1952.jpg!q50.jpg"
+    },
+    {
+        "goodsName": "鞋子一号",
+        "price": "123",
+        "goodsListImg": "https://m.360buyimg.com/mobilecms/s357x357_jfs/t3625/351/2213682638/238509/7e35facc/58468712N153bc92c.jpg!q50.jpg"
+    },
+    {
+        "goodsName": "鞋子2号",
+        "price": "242",
+        "goodsListImg": "https://m.360buyimg.com/mobilecms/s357x357_jfs/t3217/111/9113549900/160760/17a50663/58cf3bfdN1fcdd8a6.jpg!q50.jpg"
+    }
+]

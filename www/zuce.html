@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<tou>
+		<meta charset="UTF-8">
+		<title></title>
+	</tou>
+	<link rel="stylesheet" type="text/css" href="css/conmont.css"/>
+	<link rel="stylesheet" type="text/css" href="css/wode.css"/>
+	<script src="js/vue.js"></script>
+	<script src="js/vue-router.min.js"></script>
+	<body>
+		<div id="box">
+			<v-tou></v-tou>
+			<v-bcont></v-bcont>
+			<v-foot></v-foot>
+		</div>
+		<template id="tou">
+				<div class="tou">
+					<button><a href="index.html">
+						<
+					</a>  </button>
+					<h2>在线注册</h2>
+				</div>
+			</template>
+			<template id="bcont">
+				<div class="bant">
+				<p> <input type="text" placeholder="账号:用户名/邮箱/手机"/></p>	
+				<p> <input type="text" placeholder="密码：请输入密码"/></p>	
+				<p> <input type="text" placeholder="验证码"/></p>
+				<p>
+					<button>注册</button>
+					<button><a href="wode.html">登录</a></button>
+				</p>
+				</div>
+			</template>
+			
+			<template id="foot">
+			<div class="foot">
+				<div class="foot-bt">
+					<ul class="ft-ul">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="tejia.html">特价</a></li>
+						<li><a href="fenlei.html">分类</a></li>
+						<li><a href="gouwu.html" >购物车</a></li>
+						<li><a href="wode.html" style="color: red;" >我的</a></li>
+					</ul>
+				</div>
+			</div>
+		</template>
+	</body>
+	<script>
+		var Event=new Vue();
+		var tou={
+			template:"#tou"
+		}
+		var bcont={
+			template:"#bcont"
+		}
+		var foot={
+			template:"#foot"
+		}
+		var vn=new Vue({
+			el:"#box",
+			data:{
+				
+			},
+			components:{
+				'v-tou':tou,
+				'v-bcont':bcont,
+				'v-foot':foot
+				
+			}
+		})
+	</script>
+</html>

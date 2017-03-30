@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/conmont.css"/>
+	<link rel="stylesheet" type="text/css" href="icon/iconfont.css"/>
+	<script src="js/vue.js"></script>
+	<script src="js/lib/vue-router.min.js"></script>
+	<script src="icon/iconfont.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/tejia.css"/>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	
+	<body>
+		<div id="box">
+			<v-head></v-head>
+			<v-cont></v-cont>
+			<v-foot></v-foot>
+		</div>
+	</body>
+	<template id="head">
+		<div class="head" style="background: black;">
+				
+				<div class="h-center">
+					<h2 style=" font-size: 3rem; color: white; background: black;">优惠特价</h2>
+				</div>
+				
+			</div>
+	</template>
+	
+	<template id="cont">
+		<div class="cont">
+			<div class="sview">
+			<ul>
+		    		<li v-for="(item,i) in list">	
+		    		<div>
+		    			<p class="p-left"><img v-bind:src="list[i].goodsListImg"/></p>
+		    			<p class="p-right">
+		    				<span>价格：{{list[i].price}}</span>
+		    <span>品牌：{{list[i].goodsName}}</span>
+		    			</p>
+	
+		    		</div>
+		    		</li>
+		    	</ul>
+		</div>
+		</div>
+	</template>
+	
+	<template id="foot">
+		<div class="foot">
+				<div class="foot-bt">
+					<ul class="ft-ul">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="tejia.html" style="color: red;">特价</a></li>
+						<li><a href="fenlei.html">分类</a></li>
+						<li><a href="">购物车</a></li>
+						<li><a href="">我的</a></li>
+					</ul>
+				</div>
+			</div>
+	</template>
+	<script>
+		var Event=new Vue();
+		
+		var head={
+			template:"#head"
+		}
+		var cont={
+			template:"#cont",
+			data:function(){
+				return {
+					list:[]
+				}
+			},
+			beforeMount(){
+				var _that=this;   /*注意this的作用域*/
+			           axios.get('./js/lnv.json')
+			           .then(function (response) {
+		           console.log(response.data);
+			
+			               _that.list=response.data;
+			               console.log(list[1].className)
+			           })
+			           .catch(function (error) {
+			               console.log(error);
+			           });
+			}
+		}
+		var foot={
+			template:"#foot"
+		}
+		var vn=new Vue({
+			el:"#box",
+			
+			data:{
+				
+			},
+			methods:{
+				
+			},
+			components:{
+				'v-head':head,
+				'v-cont':cont,
+				'v-foot':foot
+				
+			}
+		})
+	</script>
+</html>

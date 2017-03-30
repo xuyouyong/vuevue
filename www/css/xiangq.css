@@ -1,0 +1,23 @@
+*{ margin: 0px; padding: 0px;}
+a{text-decoration: none;}
+li{ list-style: none;}
+.head{ width: 100%; height: 6rem; background: black;position: absolute;top: 0px;}
+.head li{ float: left; width: 22%; text-align: center; font-size: 3rem; line-height: 6rem;}
+.head li a{ color: white;}
+
+
+.fot{ width: 100%; height: 8rem; position: absolute; bottom: 0px; font-size: 3rem; background: black;}
+.con-img{ width: 7rem;}
+.con-p{ width: 20rem; height:20rem;}
+.cont img{ width: 100%;}
+.cont button{ font-size: 4rem;}
+
+ .fot li{ width: 50%; text-align: center; float: left;}
+ .fot li button{font-size: 3rem; border: 0px; color: white; background: black;}
+
+
+.cont{margin-top: 13%;  width: 100%; height: 86.5%; font-size: 3rem;}
+
+.bt{ position: fixed; top: 1rem; right: 2rem; background: black; border: 0px;}
+.bt a{font-size: 3rem;color: white;}
+.bt-g1 span{color: white;}

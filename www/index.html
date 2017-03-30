@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<script src="js/vue.js"></script>
+	<script src="js/lib/vue-router.min.js"></script>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/lunbo.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="js/lib/swiper-3.4.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/lib/swiper-3.4.2.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/conmont.css"/>
+	<link rel="stylesheet" type="text/css" href="icon/iconfont.css"/>
+	<script src="icon/iconfont.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	
+	</head>
+	<body>
+		<div id="box">
+		   	<v-head></v-head>
+		    <v-banners></v-banners>
+		    <v-nav></v-nav>
+		    <v-ner></v-ner>
+		    <v-foot></v-foot>
+		</div>
+	
+	<template id="head">
+		<div class="head" style="background: black;">
+				
+				<div class="h-center">
+					<h2 style=" font-size: 3rem; color: white; background: black;">走了秀</h2>
+				</div>
+				
+			</div>
+	</template>
+	
+	<template id="banners">
+		<div id="banner">
+				<ul>
+					<li class="on">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					</ul>
+					<div id="banner_list">
+					<a href="#" target="_blank"><img src="img/banner1.jpg" /></a>
+					<a href="#" target="_blank"><img src="img/banner2.jpg" /></a>
+					<a href="#" target="_blank"><img src="img/banner3.jpg" /></a>
+					<a href="#" target="_blank"><img src="img/banner4.jpg" /></a>
+					<a href="#" target="_blank"><img src="img/banner5.jpg" /></a>
+</div>
+			</div>
+	</template>
+	
+	<template id="nav">
+		<div class="nav swiper-container">
+			<div class="swiper-wrapper">
+				<p class="swiper-slide"><a href=""><router-link to="/shouye">首页</router-link></a></p>
+				<p class="swiper-slide"><a href=""><router-link to="/tehui">特惠</router-link></a></p>
+			   	<p class="swiper-slide"><a href=""><router-link to="/nanzhuang">男装</router-link></a></p>
+			   	<p class="swiper-slide"><a href=""><router-link to="/nvzhuang">女装</router-link></a></p>
+			   	<p class="swiper-slide"><a href=""><router-link to="/shuma">手机数码</router-link></a></p>
+			   	<p class="swiper-slide"><a href=""><router-link to="xiebao">鞋包</router-link></a></p>
+			   	<p class="swiper-slide"><a href=""><router-link to="yundong">运动</router-link></a></p>
+			   	<p class="swiper-slide"><a href=""><router-link to="muying">母婴</router-link></a></p>
+			   
+			</div>  
+			
+			</div>
+			
+	</template>
+	
+	<!--
+    	内容
+    -->
+    <template id="ner">
+    	<div>
+    		<router-view></router-view>
+    	</div>
+    </template>
+	<!--
+       nav组件
+    -->
+	<template id="shouye">
+		<div class="sview">
+			<ul>
+		    		<li v-for="(item,i) in list">	
+		    		<div>
+		    			<p class="p-left"><a href="xiangq.html#sxa"><img v-bind:src="list[i].goodsListImg"/></a></p>
+		    			<p class="p-right">
+		    				<span>价格：{{list[i].price}}</span>
+		    <span>品牌：{{list[i].goodsName}}</span>
+		    			</p>
+		    
+		    		</div>
+		    		</li>
+		    	</ul>
+		</div>
+	</template>
+	<template id="tehui">
+		<div class="sview">
+			<ul>
+		    		<li v-for="(item,i) in list">	
+		    		<div>
+		    			<p class="p-left"><a href="xiangq.html#sxa"><img v-bind:src="list[i].goodsListImg"/></a></p>
+		    			<p class="p-right">
+		    				<span>价格：{{list[i].price}}</span>
+		    <span>品牌：{{list[i].goodsName}}</span>
+		    			</p>
+		    
+		    		</div>
+		    		</li>
+		    	</ul>
+		</div>
+	</template>
+	<template id="nanzhuang">
+		<div class="sview">
+			<ul>
+		    		<li v-for="(item,i) in list">	
+		    		<div>
+		    			<p class="p-left"><a href="xiangq.html#sxa"><img v-bind:src="list[i].goodsListImg"/></a></p>
+		    			<p class="p-right">
+		    				<span>价格：{{list[i].price}}</span>
+		    <span>品牌：{{list[i].goodsName}}</span>
+		    			</p>
+		    
+		    		</div>
+		    		</li>
+		    	</ul>
+		</div>
+	</template>
+	<template id="nvzhuang">
+		<div class="sview">
+			<ul>
+		    		<li v-for="(item,i) in list">	
+		    		<div>
+		    			<p class="p-left"><a href="xiangq.html#sxa"><img v-bind:src="list[i].goodsListImg"/></a></p>
+		    			<p class="p-right">
+		    				<span>价格：{{list[i].price}}</span>
+		    <span>品牌：{{list[i].goodsName}}</span>
+		    			</p>
+		    
+		    		</div>
+		    		</li>
+		    	</ul>
+		</div>
+	</template>
+	<template id="shuma">
+		<div class="sview">
+			<ul>
+		    		<li v-for="(item,i) in list">	
+		    		<div>
+		    			<p class="p-left"><a href="xiangq.html#sxa"><img v-bind:src="list[i].goodsListImg"/></a></p>
+		    			<p class="p-right">
+		    				<span>价格：{{list[i].price}}</span>
+		    <span>品牌：{{list[i].goodsName}}</span>
+		    			</p>
+		    
+		    		</div>
+		    		</li>
+		    	</ul>
+		</div>
+	</template>
+	<template id="xiebao">
+		<div class="sview">
+			<ul>
+		    		<li v-for="(item,i) in list">	
+		    		<div>
+		    			<p class="p-left"><img v-bind:src="list[i].goodsListImg"/></p>
+		    			<p class="p-right">
+		    				<span>价格：{{list[i].price}}</span>
+		    <span>品牌：{{list[i].goodsName}}</span>
+		    			</p>
+		    
+		    		</div>
+		    		</li>
+		    	</ul>
+		</div>
+	</template>
+	<template id="yundong">
+		<div class="sview">
+			<ul>
+		    		<li v-for="(item,i) in list">	
+		    		<div>
+		    			<p class="p-left"><img v-bind:src="list[i].goodsListImg"/></p>
+		    			<p class="p-right">
+		    				<span>价格：{{list[i].price}}</span>
+		    <span>品牌：{{list[i].goodsName}}</span>
+		    			</p>
+		    
+		    		</div>
+		    		</li>
+		    	</ul>
+		</div>
+	</template>
+	<template id="muying">
+		<div class="sview">
+			<ul>
+		    		<li v-for="(item,i) in list">	
+		    		<div>
+		    			<p class="p-left"><img v-bind:src="list[i].goodsListImg"/></p>
+		    			<p class="p-right">
+		    				<span>价格：{{list[i].price}}</span>
+		    <span>品牌：{{list[i].goodsName}}</span>
+		    			</p>
+		    
+		    		</div>
+		    		</li>
+		    	</ul>
+		</div>
+	</template>
+	
+	<!--
+    	dibu组件
+    -->
+	<template id="foot">
+		<div class="foot">
+				<div class="foot-bt">
+					<ul class="ft-ul">
+						<li><a href="index.html" style="color: red;">首页</a></li>
+						<li><a href="tejia.html">特价</a></li>
+						<li><a href="fenlei.html">分类</a></li>
+						<li><a href="gouwu.html">购物车</a></li>
+						<li><a href="wode.html">我的</a></li>
+					</ul>
+				</div>
+			</div>
+	</template>
+	
+	</body>
+	<script src="js/index-v.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	 var mySwiper = new Swiper('.swiper-container',{
+      slidesPerView : 4,
+      centeredSlides : false,
+})
+	</script>
+</html>

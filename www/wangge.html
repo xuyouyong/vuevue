@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<style type="text/css">
+		.swiper-container {
+    width: 600px;
+    height: 300px;
+}  
+.swiper-slide{ width: 200px;height: 80px; background: red;}
+	</style>
+	<script src="js/lib/swiper-3.4.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/lib/swiper-3.4.2.min.css"/>
+	<body>
+
+<div class="nav swiper-container">
+			   <ul class="swiper-wrapper">
+			   	<li class="swiper-slide"><a href="">首页</a></li>
+			   	<li class="swiper-slide"><a href="">特惠</a></li>
+			   	<li class="swiper-slide"><a href="">男装</a></li>
+			   	<li class="swiper-slide"><a href="">女装</a></li>
+			   	<li class="swiper-slide"><a href="">母婴尚新</a></li>
+			   	<li class="swiper-slide"><a href="">鞋包</a></li>
+			   	<li class="swiper-slide"><a href="">手机数码</a></li>
+			   </ul>
+			</div>
+	</body>
+	<script>        
+  var mySwiper = new Swiper('.swiper-container',{
+slidesPerView : 3,
+centeredSlides : true,
+})
+    
+  
+        
+  </script>
+</html>

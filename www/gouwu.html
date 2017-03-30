@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/conmont.css"/>
+	<link rel="stylesheet" type="text/css" href="js/gouwu.css"/>
+	<body>
+		<div id="box">
+			<v-head></v-head>
+			<v-cont></v-cont>
+			<v-foot></v-foot>
+		</div>
+		<template id="head">
+			<div class="tou">
+				<button><a href="index.html">
+						<
+					</a>  </button>
+					<h2>购物车</h2>
+			</div>
+		</template>
+		
+		<template id="cont">
+			<div class="contd">
+				
+				<p><img id="ss0" src=""/></p>
+				<p style="font-size: 3rem;">价格：<span id="ss1">1</span></p>
+				<p style="font-size: 3rem;">数量：<span id="ss2">2</span></p>
+				<p style="font-size: 3rem;">总钱：<span id="ss3">3</span></p>
+			</div>
+		</template>
+		
+		<template id="foot">
+			<div class="foot">
+				<div class="foot-bt">
+					<ul class="ft-ul">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="tejia.html">特价</a></li>
+						<li><a href="fenlei.html">分类</a></li>
+						<li><a href="gouwu.html" style="color: red;">购物车</a></li>
+						<li><a href="wode.html">我的</a></li>
+					</ul>
+				</div>
+			</div>
+		</template>
+	</body>
+	<script src="js/jquery-2.1.0.js"></script>
+	
+	
+	<script>
+		var Event=new Vue();
+		
+		var head={
+			template:"#head"
+		}
+		var cont={
+			template:"#cont"
+		}
+		var foot={
+			template:"#foot"
+		}
+		
+		var vn=new Vue({
+			el:"#box",
+			data:{
+				
+			},
+			components:{
+				'v-head':head,
+				'v-cont':cont,
+				'v-foot':foot
+			}
+		})
+	</script>
+	<script>
+		window.onload=function(){
+			
+		
+		var shu1 = localStorage.getItem("价格");
+		var shu2 = localStorage.getItem("数量");
+		var shu3 = localStorage.getItem("总钱");
+		var shu4 = localStorage.getItem("图片");
+		console.log(shu1)
+		console.log(shu2)
+		console.log(shu3)
+		console.log(shu4)
+		var gg1=document.getElementById('ss0')
+		var gg2=document.getElementById('ss1')
+		var gg3=document.getElementById('ss2')
+		var gg4=document.getElementById('ss3')
+		console.log(gg2)
+	
+	            //加载图片
+	    $("#ss0").attr("src",localStorage.getItem("图片"));
+		gg2.textContent=localStorage.getItem("价格");
+		gg3.textContent=localStorage.getItem("数量");
+		gg4.textContent=localStorage.getItem("总钱");
+		}
+	</script>
+</html>

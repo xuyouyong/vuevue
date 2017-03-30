@@ -1,0 +1,7 @@
+.bant{ width: 100%; }
+.bant p{ margin-top: 2rem; width: 85%; margin:2rem auto; }
+.bant input{ font-size: 3rem; border: 1px solid black; width: 90%;}
+.bant p button{ font-size: 2.7rem; margin-left: 2rem; background: white; border: 0;}
+.bant span{font-size:5rem;}
+
+.zc input{ width: 90%; background: black; color: white; display: block; text-align: center; margin-top: 1rem;}

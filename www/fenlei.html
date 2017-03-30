@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/conmont.css"/>
+	<link rel="stylesheet" type="text/css" href="icon/iconfont.css"/>
+	<script src="js/vue.js"></script>
+	<script src="js/lib/vue-router.min.js"></script>
+	<script src="icon/iconfont.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/fenlei.css"/>
+	
+	<body>
+		<div id="box">
+			<v-head></v-head>
+			 
+			<v-bant></v-bant>
+			
+			<v-foot></v-foot>
+		</div>
+	</body>
+	<template id="head">
+		<div class="head" style="background: black;">
+				
+				<div class="h-center">
+					<h2 style=" font-size: 3rem; color: white; background: black;">分类</h2>
+				</div>
+				
+			</div>
+	</template>
+	
+	<template id="bant">
+		<div class="bant">
+			<div class="bt-left">
+				<p><router-link to='/fnz'>男装</router-link></p>
+				<p><router-link to='/fnv'>女装</router-link></p>
+				<p><router-link to='/fsm'>手机数码</router-link></p>
+				<p><router-link to='/fxb'>鞋包</router-link></p>
+				<p><router-link to='/fmy'>母婴</router-link></p>
+				<p><router-link to='/fyd'>运动</router-link></p>
+			</div>
+			<div class="bt-right">
+				<router-view></router-view>
+			</div>
+		</div>
+	</template>
+   <!-- 分类  -->
+	<template id="fnz">
+		<div class="div-nz">
+			<img src="http://g-search3.alicdn.com/img/bao/uploaded/i4/i1/TB1EmgpJXXXXXbTXVXXXXXXXXXX_!!0-item_pic.jpg_180x180.jpg_.webp"/>
+			<img src="http://img12.360buyimg.com/n8/jfs/t1210/220/1197759086/274389/50b1f74e/557e7c26Nc3b07697.jpg"/>
+		</div>
+	</template>
+	<template id="fnv">
+		<div class="div-nz">
+			<img src="http://s17.mogucdn.com/p1/151012/1gxg40_ie2dcyrqmeydomrtgqzdambqgiyde_800x1280.jpg_220x330.webp"/>
+			<img src="https://img.alicdn.com/bao/uploaded///img.alicdn.com/bao/uploaded/i4/TB1vGO5IFXXXXb4XXXXXXXXXXXX_!!0-item_pic.jpg_160x160q90.jpg"/>
+		</div>
+	</template>
+	<template id="fsm">
+		<div class="div-nz">
+			<img src="https://m.360buyimg.com/mobilecms/s357x357_jfs/t3685/222/1924500541/583595/6dc7aed9/5836668eN8b2a9cc4.png!q50.jpg"/>
+			<img src="https://m.360buyimg.com/mobilecms/s357x357_jfs/t3751/279/1864217108/170619/d1a6ad51/58343dc1Nbb3d4722.jpg!q50.jpg"/>
+		</div>
+	</template>
+	<template id="fxb">
+		<div class="div-nz">
+			<img src="https://m.360buyimg.com/mobilecms/s357x357_jfs/t3625/351/2213682638/238509/7e35facc/58468712N153bc92c.jpg!q50.jpg"/>
+			<img src="https://m.360buyimg.com/mobilecms/s357x357_jfs/t4003/10/1728479432/130726/2e889d09/5892f9e1N403e1952.jpg!q50.jpg"/>
+		</div>
+	</template>
+	<template id="fmy">
+		<div class="div-nz">
+			<img src="https://m.360buyimg.com/mobilecms/s357x357_jfs/t1864/244/1980808812/267777/4915f1c9/56e7ebfdN0ee578e1.jpg!q50.jpg"/>
+			<img src="https://m.360buyimg.com/mobilecms/s357x357_jfs/t2320/344/914284033/143315/a5dcd4ec/563b014bNc2e575e4.jpg!q50.jpg"/>
+		</div>
+	</template>
+	<template id="fyd">
+		<div class="div-nz">
+			<img src="https://m.360buyimg.com/mobilecms/s357x357_jfs/t3139/222/2920454123/154990/55b8a23c/57e8de62N66b39a65.jpg!q50.jpg"/>
+			<img src="https://m.360buyimg.com/mobilecms/s357x357_jfs/t3139/222/2920454123/154990/55b8a23c/57e8de62N66b39a65.jpg!q50.jpg"/>
+		</div>
+	</template>
+	<!-- 底部 -->
+	<template id="foot">
+		<div class="foot">
+				<div class="foot-bt">
+					<ul class="ft-ul">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="tejia.html">特价</a></li>
+						<li><a href="fenlei.html" style="color: red;">分类</a></li>
+						<li><a href="gouwu.html">购物车</a></li>
+						<li><a href="wode.html">我的</a></li>
+					</ul>
+				</div>
+			</div>
+	</template>
+	<script src="js/fenlei.js">
+		
+	</script>
+</html>
